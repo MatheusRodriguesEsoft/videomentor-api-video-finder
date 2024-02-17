@@ -4,6 +4,6 @@ api:
     path:
       playlist: youtube/v3/playlistItems
       video: youtube/v3/videos
-  key: API_KEY
+  key: AIzaSyA9FKiDv61Srr4JNp56Ww7yiaHLZIB8rHc
 server:
-  port: SERVER_PORT
+  port: 8082
