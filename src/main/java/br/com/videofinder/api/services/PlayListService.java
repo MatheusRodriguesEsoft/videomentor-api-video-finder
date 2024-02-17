@@ -44,7 +44,8 @@ public class PlayListService {
                 .queryParam("maxResults", maxResults)
                 .build();
 
-        ResponseEntity<PlayListDto> responseEntity = restTemplate.getForEntity(uriComponents.toString(), PlayListDto.class);
+        ResponseEntity<PlayListDto> responseEntity = restTemplate.getForEntity(uriComponents.toString(),
+                PlayListDto.class);
         System.out.println("Request playlist completed");
         return responseEntity.getBody();
 

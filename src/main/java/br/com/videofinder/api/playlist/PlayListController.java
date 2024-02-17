@@ -1,5 +1,6 @@
 package br.com.videofinder.api.playlist;
 
+import br.com.videofinder.api.services.PlayListService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,10 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.beans.factory.annotation.Autowired;
-
-
-import br.com.videofinder.api.services.PlayListService;
 
 /**
  * @author Matheus Rodrigues <matheusrodrigues@outlook.com.br>
@@ -21,8 +18,11 @@ import br.com.videofinder.api.services.PlayListService;
 @RequestMapping("/playlists")
 public class PlayListController {
 
-    @Autowired
     private PlayListService playListService;
+
+    public PlayListController(PlayListService playListService) {
+        this.playListService = playListService;
+    }
 
     /**
      * @param id
