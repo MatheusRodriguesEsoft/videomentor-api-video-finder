@@ -1,0 +1,9 @@
+api:
+  url:
+    host: www.googleapis.com
+    path:
+      playlist: youtube/v3/playlistItems
+      video: youtube/v3/videos
+  key: ${API_KEY}
+server:
+  port: ${SERVER_PORT}
